@@ -18,19 +18,5 @@ namespace OOPDraw
             InitializeComponent();
             DoubleBuffered = true;
         }
-
-        private Bitmap MyImage;
-        private void pictureBox1_Click(String fileToDisplay, int xSize, int ySize)
-        {
-            if (MyImage != null)
-            {
-                MyImage.Dispose();
-            }
-
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            MyImage = new Bitmap(fileToDisplay);
-            pictureBox1.ClientSize = new Size(xSize, ySize);
-            pictureBox1.Image = (Image)MyImage;
-        }
     }
 }
