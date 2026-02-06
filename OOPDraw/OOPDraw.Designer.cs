@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Colour = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Shape = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +114,29 @@
             this.Colour.Name = "Colour";
             this.Colour.Size = new System.Drawing.Size(210, 33);
             this.Colour.TabIndex = 5;
-            this.Colour.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Colour.SelectedIndexChanged += new System.EventHandler(this.Colour_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label4.Location = new System.Drawing.Point(13, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Shape";
+            // 
+            // Shape
+            // 
+            this.Shape.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Shape.FormattingEnabled = true;
+            this.Shape.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle"});
+            this.Shape.Location = new System.Drawing.Point(17, 222);
+            this.Shape.Name = "Shape";
+            this.Shape.Size = new System.Drawing.Size(210, 33);
+            this.Shape.TabIndex = 7;
             // 
             // OOPDraw
             // 
@@ -123,6 +147,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1233, 775);
+            this.Controls.Add(this.Shape);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Colour);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -146,11 +172,13 @@
         #endregion
 
         private System.Windows.Forms.PictureBox Canvas;
-        private System.Windows.Forms.ComboBox LineWidth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox Colour;
+        private System.Windows.Forms.ComboBox LineWidth;
+        private System.Windows.Forms.ComboBox Shape;
     }
 }
 
